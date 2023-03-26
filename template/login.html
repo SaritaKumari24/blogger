@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load tailwind_filters %}
+{% block content %}
+
+   
+    <div class="w-96 mx-96 rounded-lg px-9 py-5 bg-slate-100 mt-28 ">
+    
+        <div class="header ">
+            <h1>Login Form</h1>
+        </div>
+       <div class="">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy}}
+            <input type="Submit" class="bg-green-600 hover:bg-green-700 w-full rounded-xl text-white py-1">
+        </form>
+       </div>
+    
+   
+   </div>
+{% endblock content %}
